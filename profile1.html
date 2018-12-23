@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+			.control:checked ~ p.conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ p.conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+
+.control1:checked ~ st.conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control1:not(:checked) ~ st.conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+
+.control2:checked ~ c.conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control2:not(:checked) ~ c.conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="topnav">
+  <a href="home.html">Home</a>
+  <a class="active" href="profile1.html">Profile1</a>
+  <a href="profile2.html">Profile2</a>
+  <a href="profile3.html">Profile3</a>
+  <a href="profile4.html">Profile4</a>
+</div>
+
+
+
+</div>
+</div>
+
+<input type="button" onclick="/calibrate.php" value="Calibrate">
+
+<h2 title="I'm a header">Flow Control</h2>
+
+<p title="I'm a tooltip">
+Control the flow parameters.
+</p>
+
+<form ACTION=/phpdec.php>
+Number of profiles:
+<input type="number" name="nprofiles">
+</br>
+</br>
+
+This is profile 1
+
+Profile Definition Method:
+<br>
+ <input type="radio" name="profile" value="timed" class="control"> Timed cycle<br>
+   <input type="radio" name="profile" value="standard" class="control1"> Standard Waveform<br>
+    <input type="radio" name="profile" value="constant" class="control2" > Constant<br>
+     <input type="radio" name="profile" value="custom" checked > Custom 
+     <br>
+
+
+</br>
+</br>
+<p
+<fieldset class="conditional">
+Enter duration(min):
+<input type="number" name="tcsection1" >
+  Flow rate:
+  <input type="number" name="tcsection1f" >
+  <br>
+Enter duration(min):
+<input type="number" name="tcsection2" >
+  Flow rate:
+  <input type="number" name="tcsection2f" >
+  <br>
+ 
+<input type="checkbox" name="add" value="add" class="controladd1"> add section <br>
+
+Enter duration(min):
+<input type="number" name="tcsection3" >
+  Flow rate:
+  <input type="number" name="tcsection3f" >
+<br>
+  
+<input type="checkbox" name="add" value="add" class="controladd2"> add section <br>
+
+  Enter duration(min):
+<input type="number" name="tcsection4" >
+  Flow rate:
+  <input type="number" name="tcsection4f" >
+<br>
+
+  <input type="checkbox" name="add" value="add" class="controladd3"> add section <br>
+
+
+  Enter duration(min):
+<input type="number" name="tcsection5" >
+  Flow rate:
+  <input type="number" name="tcsection5f" >
+
+  </fieldset>
+
+</p>
+
+<c
+<fieldset class="conditional">
+Enter flow rate(ml/min):
+<input type="number" name="flowc" step="0.5" >
+</fieldset>
+</c>
+
+<st
+    <fieldset class="conditional">
+Waveform: &ensp;
+<select name="Waveform" >
+  <option value=""></option>
+  <option value="rect">Rectangular</option>
+  <option value="sinusoid">Sinusoid</option>
+  <option value="tri">Triangular</option>
+  </select>
+  </br>
+  Frequency(Hz):
+  <input type="number" name="frequency" step="0.5">
+</br>
+  Maximum:
+  <input type="number" name="maxamp" step="0.5">
+ &ensp; Minimum:
+  <input type="number" name="minamp" step="0.5">
+  
+</select>
+
+    </fieldset>
+</st>
+</br>
+</br>
+</br>
+</br>
+
+<input type="submit" value= "Submit">
+</body>
+</form>
+
+</html>

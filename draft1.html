@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+			.control:checked ~ p.conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ p.conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+
+.control1:checked ~ st.conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control1:not(:checked) ~ st.conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+
+.control2:checked ~ c.conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control2:not(:checked) ~ c.conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+
+</style>
+</head>
+
+<body>
+<input type="button" onclick="/calibrate.php" value="Calibrate">
+
+<h2 title="I'm a header">Flow Control</h2>
+
+<p title="I'm a tooltip">
+Control the flow parameters.
+</p>
+
+<form ACTION=/phpdec.php>
+
+
+Profile Definition Method:
+<br>
+ <input type="radio" name="profile" value="timed" class="control"> Timed cycle<br>
+   <input type="radio" name="profile" value="standard" class="control1"> Standard Waveform<br>
+    <input type="radio" name="profile" value="constant" class="control2" > Constant<br>
+     <input type="radio" name="profile" value="custom" checked > Custom 
+     <br>
+
+
+</br>
+</br>
+<p
+<fieldset class="conditional">
+Enter duration(min):
+<input type="number" name="section1" >
+  Flow rate:
+  <input type="number" name="section1f" >
+  <br>
+Enter duration(min):
+<input type="number" name="section2" >
+  Flow rate:
+  <input type="number" name="section2f" >
+  <br>
+ 
+<input type="checkbox" name="add" value="add" class="controladd1"> add section <br>
+
+Enter duration(min):
+<input type="number" name="section3" >
+  Flow rate:
+  <input type="number" name="section3f" >
+<br>
+  
+<input type="checkbox" name="add" value="add" class="controladd2"> add section <br>
+
+  Enter duration(min):
+<input type="number" name="section4" >
+  Flow rate:
+  <input type="number" name="section4f" >
+<br>
+
+  <input type="checkbox" name="add" value="add" class="controladd3"> add section <br>
+
+
+  Enter duration(min):
+<input type="number" name="section5" >
+  Flow rate:
+  <input type="number" name="section5f" >
+
+  </fieldset>
+
+</p>
+
+<c
+<fieldset class="conditional">
+Enter flow rate(ml/min):
+<input type="number" name="flowc" step="0.5" >
+</fieldset>
+</c>
+
+<st
+    <fieldset class="conditional">
+Waveform: &ensp;
+<select name="Waveform" >
+  <option value=""></option>
+  <option value="rect">Rectangular</option>
+  <option value="sinusoid">Sinusoid</option>
+  <option value="tri">Triangular</option>
+  </select>
+  </br>
+  Frequency(Hz):
+  <input type="number" name="frequency" step="0.5">
+</br>
+  Maximum:
+  <input type="number" name="frequency" step="0.5">
+ &ensp; Minimum:
+  <input type="number" name="frequency" step="0.5">
+  
+</select>
+
+    </fieldset>
+</st>
+</br>
+</br>
+</br>
+</br>
+
+<input type="submit" value= "Submit">
+</body>
+</form>
+
+</html>
